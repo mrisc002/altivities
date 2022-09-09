@@ -104,6 +104,7 @@ async function clearElement(data: HTMLElement) {
 const COLOR_WHITE = "#F9F9F9"
 const COLOR_DARK_BLUE = "#5AA9E6"
 const COLOR_RED = "#FC7B7B"
+const COLOR_BLACK = "#000000"
 
 const LOCAL_STORAGE_PEERJS_ID = "memory_peerjs"
 const LOCAL_STORAGE_NAME = "memory_name"
@@ -512,7 +513,7 @@ function showTeacherQR() {
     const size = Math.min(window.innerWidth, window.innerHeight * 0.8)
     const connectURL = `${window.location.href}`
     new QRCode(QR, {
-        colorDark: COLOR_RED,
+        colorDark: COLOR_BLACK,
         colorLight: COLOR_WHITE,
         correctionLevel: QRCode.CorrectLevel.H,
         height: size,
@@ -526,7 +527,7 @@ function showQR(hostID: string) {
     const size = Math.min(window.innerWidth, window.innerHeight * 0.8)
     const connectURL = `${window.location.origin}${window.location.pathname}?${new URLSearchParams({ id: hostID })}`
     new QRCode(QR, {
-        colorDark: COLOR_DARK_BLUE,
+        colorDark: COLOR_BLACk,
         colorLight: COLOR_WHITE,
         correctionLevel: QRCode.CorrectLevel.H,
         height: size,
